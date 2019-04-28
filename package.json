@@ -1,0 +1,45 @@
+{
+  "name": "react-simpler-tooltip",
+  "version": "0.0.4",
+  "description": "Lightweight and easy-to-use react component to display a tooltip over a given element when passing mouse on it",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmalahie/react-simpler-tooltip.git"
+  },
+  "keywords": [
+    "tooltip",
+    "react",
+    "react-tooltip",
+    "title",
+    "title",
+    "text"
+  ],
+  "author": "Timmy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmalahie/react-simpler-tooltip/issues"
+  },
+  "homepage": "https://github.com/tmalahie/react-simpler-tooltip#readme",
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-react": "*",
+    "babel-loader": "*",
+    "css-loader": "*",
+    "react": "*",
+    "react-dom": "*",
+    "style-loader": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}

@@ -1,0 +1,56 @@
+.simpler-tooltip {
+   position: absolute;
+   z-index: 100;
+   color: white;
+   display: inline-block;
+   pointer-events: none;
+}
+ .simpler-tooltip-div {
+   background-color: black;
+   padding: 2px 6px 4px 6px;
+   margin: 2px;
+   text-align: justify;
+}
+ .simpler-tooltip-diamond {
+   background-color: black;
+   position: absolute;
+   -webkit-transform: translate(-50%,-50%) rotate(45deg);
+   -moz-transform: translate(-50%,-50%) rotate(45deg);
+   -o-transform: translate(-50%,-50%) rotate(45deg);
+   -ms-transform: translate(-50%,-50%) rotate(45deg);
+   transform: translate(-50%,-50%) rotate(45deg);
+   width: 12px;
+   height: 12px;
+}
+ .simpler-tooltip-left .simpler-tooltip-diamond {
+   right: -6px;
+   top: 50%;
+}
+ .simpler-tooltip-left .simpler-tooltip-div {
+   margin-right: 6px;
+}
+ .simpler-tooltip-right .simpler-tooltip-diamond {
+   left: 6px;
+   top: 50%;
+}
+ .simpler-tooltip-right .simpler-tooltip-div {
+   margin-left: 6px;
+}
+ .simpler-tooltip-top .simpler-tooltip-diamond {
+   left: 50%;
+   bottom: -6px;
+}
+ .simpler-tooltip-top .simpler-tooltip-div {
+   margin-bottom: 6px;
+}
+ .simpler-tooltip-bottom .simpler-tooltip-diamond {
+   left: 50%;
+   top: 6px;
+}
+ .simpler-tooltip-bottom .simpler-tooltip-div {
+   margin-top: 6px;
+}
+ .simpler-tooltip-trigger {
+   display: inline-block;
+}
+ 
