@@ -7,12 +7,12 @@ This module is very similar to [react-simple-tooltip](https://github.com/xuopled
 * Add `auto` placement option, which allows to not worry about where to draw the tooltip
 * Tooltip is rendered in the document body instead of just outside the `<div>` (See [issue](https://github.com/xuopled/react-simple-tooltip/issues/13))
 
-## Install:
+## Install
 ```bash
 npm install react-simpler-tooltip
 ```
 
-## Usage:
+## Usage
 ```jsx
 import Tooltip from 'react-simpler-tooltip'
 
@@ -28,15 +28,20 @@ render() {
 
 ![I love what you do](https://timothe.malahieude.net/projects/react-simpler-tooltip/demo.png?)
 
-## Specify placement:
+## Specify placement
 `<Tooltip content="xxx" placement="top">xxx</Tooltip>`
 
 The `placement` attribute accepts 5 values: `left`, `top`, `right`, `bottom`, and `auto`. **auto** is the default value, it means that the tooltip will be placed automatically in function of where the hovering element is (e.g if the item is at the right of the window, the tooltip will be placed at the left).
 
-## Custom style/className for tooltip:
+## Custom style/className for tooltip
 You can assign custom style or class to the tooltip with the attributes `tooltipStyle` and `tooltipClass`:
 
 `<Tooltip content="xxx" tooltipStyle={{padding:0}} tooltipClass="tooltip-menu">xxx</Tooltip>`
+
+## Tooltip events
+You can assign events called when tooltip appear and disappear:
+
+`<Tooltip content="xxx" onShow={() => alert("Hello!")} onHide={() => alert("Bye")}>xxx</Tooltip>`
 
 ## Contribute
 Feel free to contribute for this project. Issues and pull requests are welcomed.

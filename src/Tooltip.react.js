@@ -88,8 +88,8 @@ class Tooltip extends React.Component {
       break
     }
     ReactDOM.render([
-      <div className="simpler-tooltip-diamond"></div>,
-      <div className="simpler-tooltip-content" style={this.props.tooltipStyle}>{this.props.content}</div>
+      <div className="simpler-tooltip-diamond" key="simpler-tooltip-diamond"></div>,
+      <div className="simpler-tooltip-content" key="simpler-tooltip-content" style={this.props.tooltipStyle}>{this.props.content}</div>
     ], tooltipCtn)
     document.body.appendChild(tooltipCtn)
     this.tooltipCtn = tooltipCtn
@@ -113,12 +113,17 @@ class Tooltip extends React.Component {
       tooltipCtn.style.top = Math.round(centerH-(tooltipH+4)/2)+"px"
       break
     }
+    if (this.props.onShow)
+      this.props.onShow({target:tooltipCtn})
   }
   mouseout() {
-    if (this.tooltipCtn) {
-      document.body.removeChild(this.tooltipCtn)
+    let tooltipCtn = this.tooltipCtn
+    if (tooltipCtn) {
+      document.body.removeChild(tooltipCtn)
       this.tooltipCtn = null
       this.clicked = false
+      if (this.props.onHide)
+        this.props.onHide({target:tooltipCtn})
     }
   }
   click() {

@@ -1,6 +1,6 @@
 {
   "name": "react-simpler-tooltip",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Lightweight and easy-to-use react component to display a tooltip over a given element when passing mouse on it",
   "main": "dist/bundle.js",
   "scripts": {
