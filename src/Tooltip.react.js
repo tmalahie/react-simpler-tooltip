@@ -13,7 +13,7 @@ class Tooltip extends React.Component {
 
   absolutePosition(el) {
     let boundingRect = el.getBoundingClientRect();
-    let baseRect = document.body.getBoundingClientRect();
+    let baseRect = document.documentElement.getBoundingClientRect();
 
     let left = boundingRect.left - baseRect.left,
       top = boundingRect.top - baseRect.top,
@@ -67,9 +67,8 @@ class Tooltip extends React.Component {
     }
     let tooltipCtn = document.createElement("div")
     tooltipCtn.className = "simpler-tooltip simpler-tooltip-"+placement
-    let tooltipDiamond = document.createElement("div")
-    tooltipDiamond.className = "simpler-tooltip-diamond"
-    tooltipCtn.appendChild(tooltipDiamond)
+    if (this.props.tooltipClass)
+      tooltipCtn.className += " "+ this.props.tooltipClass
     switch (placement) {
     case "left":
       tooltipCtn.style.right = Math.round(rBodyW-eltBounds.left+4) +"px"
@@ -88,11 +87,10 @@ class Tooltip extends React.Component {
       tooltipCtn.style.top = Math.round(eltBounds.bottom+4) +"px"
       break
     }
-    let tooltipDiv = document.createElement("div")
-    tooltipDiv.className = "simpler-tooltip-div"
-    let tooltip = <div style={this.props.tooltipStyle} className={this.props.tooltipClass}>{this.props.content}</div>
-    ReactDOM.render(tooltip, tooltipDiv)
-    tooltipCtn.appendChild(tooltipDiv)
+    ReactDOM.render([
+      <div className="simpler-tooltip-diamond"></div>,
+      <div className="simpler-tooltip-content" style={this.props.tooltipStyle}>{this.props.content}</div>
+    ], tooltipCtn)
     document.body.appendChild(tooltipCtn)
     this.tooltipCtn = tooltipCtn
     switch (placement) {

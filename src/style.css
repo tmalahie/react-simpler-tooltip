@@ -5,7 +5,7 @@
    display: inline-block;
    pointer-events: none;
 }
- .simpler-tooltip-div {
+ .simpler-tooltip-content {
    background-color: black;
    padding: 2px 6px;
    margin: 2px;
@@ -26,28 +26,28 @@
    right: -6px;
    top: 50%;
 }
- .simpler-tooltip-left .simpler-tooltip-div {
+ .simpler-tooltip-left .simpler-tooltip-content {
    margin-right: 6px;
 }
  .simpler-tooltip-right .simpler-tooltip-diamond {
    left: 6px;
    top: 50%;
 }
- .simpler-tooltip-right .simpler-tooltip-div {
+ .simpler-tooltip-right .simpler-tooltip-content {
    margin-left: 6px;
 }
  .simpler-tooltip-top .simpler-tooltip-diamond {
    left: 50%;
    bottom: -6px;
 }
- .simpler-tooltip-top .simpler-tooltip-div {
+ .simpler-tooltip-top .simpler-tooltip-content {
    margin-bottom: 6px;
 }
  .simpler-tooltip-bottom .simpler-tooltip-diamond {
    left: 50%;
    top: 6px;
 }
- .simpler-tooltip-bottom .simpler-tooltip-div {
+ .simpler-tooltip-bottom .simpler-tooltip-content {
    margin-top: 6px;
 }
  .simpler-tooltip-trigger {
